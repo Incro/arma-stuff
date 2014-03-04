@@ -8,16 +8,7 @@ enableTeamswitch false;
 
 
 //Compilation of MarkerManager(MMS)
-MMS = compile preprocessFile "MarkerManager.sqf";
-
-//Variables to see what city/villages and military sides are. If "true" city is Occupied by OPFOR.
-
-MolosOPFORPresent = 0;
-MolosBLUFORPresent = 0;
-MolosAirfieldOPFORPresent = 0;
-MolosAirfieldBLUFORPresent = 0;
-MolosBayOPFORPresent = 0;
-MolosBayBLUFORPresent = 0;
+//MMS = compile preprocessFile "MarkerManager.sqf";
 
 
 
