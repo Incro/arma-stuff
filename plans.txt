@@ -21,6 +21,7 @@ should have less to no AI in it.
 - a few ai units should be special forces with a higher skill level (and some different infil
  methods like parachute and stuff)
 
+
 Vehicles:
 - there should be vehicles all over the map
 - military vehicles will spawn at military base

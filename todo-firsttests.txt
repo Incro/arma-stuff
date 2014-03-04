@@ -1,0 +1,7 @@
+- Get at least Northern part of Altis ready with markers etc.
+- Setup a player (re)spawn with a few vehicles.
+- Setup a ai base with spawn and respawn.
+- Make AI patrol owned cities.
+- Make AI reinforce from base on attack.
+- move scripts into scripts folder
+- Have all AI units in an Aihandle script.
