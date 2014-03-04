@@ -1,0 +1,30 @@
+Capture Altis is a coop(maybe player version later) map where you can capture every city on Altis until you 
+completely captured
+Altis.
+
+Ideas:
+- players on west side
+- EAST is AI controlled
+- every city does have trigger, area marker and flag that change depending on who is in controll.
+- AI and player respawn at military base.
+- military bases will inherit spawn point and vehicles depending on size and type
+(HQ,FOB,Outpost, Naval Outpost etc), see http://en.wikipedia.org/wiki/Military_base for suggestions.
+
+
+AI:
+- AI should split up there army in an intelegent way:
+*there should be more AI at the frontline and coast, villages and cities far away from frontline 
+should have less to no AI in it.
+* squads should be based on military base.
+* ai should reeinforce if a city or base is attacked(priority of cities)
+* reeinforcements come in by helo, vehicle or on foot depending on distance and vehicles available.
+- a few ai units should be special forces with a higher skill level (and some different infil
+ methods like parachute and stuff)
+
+Vehicles:
+- there should be vehicles all over the map
+- military vehicles will spawn at military base
+	* type and amount of vehicles should depend on size of the military base(FOB, HQ, Outpost)
+
+		
+
