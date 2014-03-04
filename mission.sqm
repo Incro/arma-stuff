@@ -214,7 +214,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={25900.686,21.313128,21515.326};
+					position[]={25898.879,21.302849,21515.457};
 					azimut=-134.632;
 					id=16;
 					side="WEST";
@@ -228,7 +228,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=6;
+		items=8;
 		class Item0
 		{
 			position[]={27001.17,20.622715,23196.334};
@@ -284,6 +284,24 @@ class Mission
 			name="MolosBay_Flag";
 			text="CSAT";
 			type="flag_CSAT";
+		};
+		class Item6
+		{
+			position[]={25824.561,21.967335,21510.648};
+			name="sofia_flag";
+			text="CSAT";
+			type="flag_CSAT";
+		};
+		class Item7
+		{
+			position[]={25819,21.672092,21487.361};
+			name="sofia_area";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="DiagGrid";
+			a=20;
+			b=20;
 		};
 	};
 	class Sensors
@@ -398,7 +416,8 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			expActiv="null = [thisTrigger] execVM ""scripts\capture.sqf"";";
+			name="sofia_trigger";
+			expActiv="_re = [thisTrigger] execVM ""scripts\capture.sqf"";";
 			class Effects
 			{
 			};

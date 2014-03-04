@@ -56,7 +56,7 @@ _markarea setMarkerColor "ColorRed";
 }
 	else
 	{
-	hint format[_area,"currently not occupied"];
+	hint format["%1, currently not occupied",_area];
 	_markflag setMarkerType "flag_ALTIS";
 	_markflag setMarkerText "CIVILIAN";
 	_markarea setMarkerColor "ColorYellow";
