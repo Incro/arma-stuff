@@ -9,12 +9,12 @@ _countEAST = east countSide _tlist;
 //hint format["PlayersWest:%1, PlayersEast:%2",_countWEST, _countEAST];
 
 
-if({_countEAST == 0} and {_countWEST > 0}) then 
+if(_countEAST == 0 and _countWEST > 0) then 
 {
 _areaOwned = "WEST";
 };
 
-if({_countWEST == 0} and {_countEAST > 0}) then
+if(_countWEST == 0 and _countEAST > 0) then
 {
 _areaOwned = "EAST";
 };
