@@ -222,13 +222,14 @@ class Mission
 					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
+					init="null = [] execVM ""CapUnitSetup.sqf"";";
 				};
 			};
 		};
 	};
 	class Markers
 	{
-		items=8;
+		items=9;
 		class Item0
 		{
 			position[]={27001.17,20.622715,23196.334};
@@ -302,6 +303,12 @@ class Mission
 			fillName="DiagGrid";
 			a=20;
 			b=20;
+		};
+		class Item8
+		{
+			position[]={25238.789,87.290764,21828.727};
+			name="FOB1";
+			type="Empty";
 		};
 	};
 	class Sensors
