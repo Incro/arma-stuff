@@ -4,3 +4,4 @@ respawnDelay = 4;
 enableDebugConsole = 1;
 allowFunctionsLog = 1;
 
+#include "scripts\SectorControl\SectorControl.hpp";
