@@ -229,7 +229,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=8;
+		items=9;
 		class Item0
 		{
 			position[]={27695.438,0.19945973,24225.229};
@@ -289,6 +289,12 @@ class Mission
 		{
 			position[]={25210.418,88.364098,21825.574};
 			name="FOB4";
+			type="Empty";
+		};
+		class Item8
+		{
+			position[]={14754.534,17.91,16671.17};
+			name="HQ";
 			type="Empty";
 		};
 	};

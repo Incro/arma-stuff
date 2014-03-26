@@ -2,6 +2,7 @@
 
 _SideHQ = createCenter east;
 
+
 //20 squadleaders at marker FOB1
 for "_i" from 1 to 20 do {
 _gname = format["Capgroup%1",_i];
@@ -10,12 +11,27 @@ call compile format["%1 setGroupId['AI%1']", _gname];
 call compile format["'O_Soldier_SL_F' createUnit[getMarkerPos 'FOB1', %1]",_gname];
 };
 
+
+
 AIGroups = [];
+//Amout of Units
+AmountSentries = 10;
+AmountFireteams = 6;
+AmountSquads = 4;
+AmountWeaponSquads = 2;
+STARTMarker = "HQ";
+
+for "_i" from 1 to AmountSentries do {[getMarkerPos STARTMarker] call SpawnSentry};
+for "_i" from 1 to AmountFireteams do {[getMarkerPos STARTMarker] call SpawnFireteam};
+for "_i" from 1 to AmountSquads do {[getMarkerPos STARTMarker] call SpawnSquad};
+for "_i" from 1 to AmountWeaponSquads do {[getMarkerPos STARTMarker] call SpawnWeaponSquad};
 
 
+
+/*
 AIGroups = AIGroups + [getMarkerPos "FOB2"]call SpawnFireteam;
 AIGroups = AIGroups + [getMarkerPos "FOB3"]call SpawnSquad;
-AIGroups = AIGroups + [getMarkerPos "FOB4"]call SpawnWeaponsSquad;
+AIGroups = AIGroups + [getMarkerPos "FOB4"]call SpawnWeaponsSquad; */
 //[getMarkerPos "FOB5"]call SpawnFireteam;
 
 
@@ -47,3 +63,12 @@ SpawnWeaponsSquad = {
 	Player globalChat "Spawned WeaponsSquad";
 	_group
 };
+
+/*
+for "_i" from 0 to count AIGroups do{
+    {
+    
+    }forEach units group AIGroups select _i;
+};
+*/
+
