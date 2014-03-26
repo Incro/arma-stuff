@@ -22,21 +22,7 @@ _areaOwned = "EAST";
 hint format["Area owned by %1", _areaOwned];
 
 //this is for further scripts
+null = ["sofia_flag","sofia_area", _areaOwned] execVM "scripts/markerchange.sqf";
 
 
-/* switch (_areaOwned) do
-{
-	case "WEST":
-	{
-	null = ["sofia_flag", "sofia_area", "WEST"] execVM "scripts/markerchange.sqf";
-	};
-	case "EAST":
-	{
-	null = ["sofia_flag", "sofia_area", "EAST"] execVM "scripts/markerchange.sqf";
-	};
-	default
-	{
-	
-	};
-}; 
 */

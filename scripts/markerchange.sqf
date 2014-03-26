@@ -18,7 +18,7 @@ switch (_side) do {
 	_marea setMarkerColor "ColorRed";
 	hint "owned by east";
 	};
-	default:
+	default
 	{
 	_marea setMarkerColor "ColorYellow";
 	};
