@@ -214,7 +214,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={26468.168,21.185083,21396.398};
+					position[]={25970.926,23.931265,21558.418};
 					azimut=-134.632;
 					id=16;
 					side="WEST";
@@ -229,45 +229,8 @@ class Mission
 	};
 	class Markers
 	{
-		items=10;
+		items=8;
 		class Item0
-		{
-			position[]={27001.17,20.622715,23196.334};
-			name="Molos_Area";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorRed";
-			fillName="DiagGrid";
-			a=250;
-			b=250;
-		};
-		class Item1
-		{
-			position[]={27032.379,20.697666,23206.596};
-			name="Molos_Flag";
-			text="CSAT";
-			type="flag_CSAT";
-		};
-		class Item2
-		{
-			position[]={26932.959,20.194607,24750.479};
-			name="MolosAirfield_Flag";
-			text="CSAT";
-			type="flag_CSAT";
-		};
-		class Item3
-		{
-			position[]={26893.762,17.726563,24740.25};
-			name="MolosAirfield_Area";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorRed";
-			fillName="DiagGrid";
-			a=250;
-			b=300;
-			angle=52;
-		};
-		class Item4
 		{
 			position[]={27695.438,0.19945973,24225.229};
 			name="MolosBay_Area";
@@ -279,24 +242,24 @@ class Mission
 			b=450;
 			angle=158.89999;
 		};
-		class Item5
+		class Item1
 		{
 			position[]={27446.391,0.0013769493,24267.551};
 			name="MolosBay_Flag";
 			text="CSAT";
 			type="flag_CSAT";
 		};
-		class Item6
+		class Item2
 		{
 			position[]={25824.561,21.967335,21510.648};
 			name="sofia_flag";
 			text="CSAT";
 			type="flag_CSAT";
 		};
-		class Item7
+		class Item3
 		{
-			position[]={25819,21.672092,21487.361};
-			name="sofia_area";
+			position[]={25904.221,21.575377,21522.16};
+			name="SectorSofia";
 			markerType="ELLIPSE";
 			type="Empty";
 			colorName="ColorRed";
@@ -304,136 +267,29 @@ class Mission
 			a=20;
 			b=20;
 		};
-		class Item8
+		class Item4
 		{
-			position[]={25238.789,87.290764,21828.727};
+			position[]={25222.203,86.792496,21852.453};
 			name="FOB1";
 			type="Empty";
 		};
-		class Item9
-		{
-			position[]={26706.498,15.709473,21213.205};
-			name="mGatolia";
-			type="Empty";
-		};
-	};
-	class Sensors
-	{
-		items=7;
-		class Item0
-		{
-			position[]={27006.357,20.679461,23197.785};
-			a=250;
-			b=250;
-			angle=52.040001;
-			activationBy="WEST";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			name="TR_Molos";
-			expActiv="if(MolosOPFORPresent == 0) then{nul = [""Molos"", ""BLUE""] call MMS;}; MolosBLUFORPresent = 1;";
-			expDesactiv="MolosBLUFORPresent = 0; if(MolosOPFORPresent == 1) then{nul = [""Molos"", ""RED""] call MMS;};";
-			class Effects
-			{
-			};
-		};
-		class Item1
-		{
-			position[]={27007.238,20.720236,23195.695};
-			a=250;
-			b=250;
-			angle=52.040001;
-			activationBy="EAST";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			name="TR_Molos_1";
-			expActiv="if(MolosBLUFORPresent == 0) then {nul = [""Molos"", ""RED""] call MMS;}; MolosOPFORPresent = 1;";
-			expDesactiv="MolosOPFORPresent = 0; if(MolosBLUFORPresent == 1) then {nul = [""Molos"", ""BlUE""] call MMS;};";
-			class Effects
-			{
-			};
-		};
-		class Item2
-		{
-			position[]={26894.488,18.635923,24735.543};
-			a=250;
-			b=300;
-			angle=52.040001;
-			activationBy="EAST";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			name="TR_MolosAirfield_1_1";
-			expActiv="if(MolosAirfieldBLUFORPresent == 0) then {nul = [""MolosAirfield"", ""RED""] call MMS;}; MolosAirfieldOPFORPresent = 1;";
-			expDesactiv="MolosAirfieldOPFORPresent = 0; if(MolosAirfieldBLUFORPresent == 1) then {nul = [""MolosAirfield"", ""BlUE""] call MMS;};";
-			class Effects
-			{
-			};
-		};
-		class Item3
-		{
-			position[]={26896.195,18.696287,24735.996};
-			a=250;
-			b=300;
-			angle=52.040001;
-			activationBy="WEST";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			name="TR_Molos_2";
-			expActiv="if(MolosAirfieldOPFORPresent == 0) then{nul = [""MolosAirfield"", ""BLUE""] call MMS;}; MolosAirfieldBLUFORPresent = 1;";
-			expDesactiv="MolosAirfieldBLUFORPresent = 0; if(MolosAirfieldOPFORPresent == 1) then{nul = [""MolosAirfield"", ""RED""] call MMS;};";
-			class Effects
-			{
-			};
-		};
-		class Item4
-		{
-			position[]={27745.967,0.053630792,24235.107};
-			a=400;
-			b=450;
-			activationBy="WEST";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			text="MolosBay";
-			name="MolosBay_BLUFOR";
-			expActiv="if(MolosBayOPFORPresent == 0) then{nul = [""MolosBay"", ""BLUE""] call MMS;}; MolosBayBLUFORPresent = 1;";
-			expDesactiv="MolosBayBLUFORPresent = 0; if(MolosBayOPFORPresent == 1) then{nul = [""MolosBay"", ""RED""] call MMS;};";
-			class Effects
-			{
-			};
-		};
 		class Item5
 		{
-			position[]={27751.281,-9.7133102,24239.646};
-			a=400;
-			b=450;
-			activationBy="EAST";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			text="MolosBay";
-			name="MolosBay_OPFOR";
-			expActiv="if(MolosBayBLUFORPresent == 0) then {nul = [""MolosBay"", ""RED""] call MMS;}; MolosBayOPFORPresent = 1;";
-			expDesactiv="MolosBayOPFORPresent = 0; if(MolosBayBLUFORPresent == 1) then {nul = [""MolosBay"", ""BlUE""] call MMS;};";
-			class Effects
-			{
-			};
+			position[]={25243.57,85.44825,21810.154};
+			name="FOB2";
+			type="Empty";
 		};
 		class Item6
 		{
-			position[]={25838.307,20.96063,21474.453};
-			activationBy="ANY";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			name="sofia_trigger";
-			expActiv="_re = [thisTrigger] execVM ""scripts\capture.sqf"";";
-			class Effects
-			{
-			};
+			position[]={25264.258,85.67437,21844.852};
+			name="FOB3";
+			type="Empty";
+		};
+		class Item7
+		{
+			position[]={25210.418,88.364098,21825.574};
+			name="FOB4";
+			type="Empty";
 		};
 	};
 };

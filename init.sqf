@@ -6,7 +6,7 @@ enableTeamswitch false;
 execVm "scripts\SectorControl\SectorControl.sqf";
 
 
-//Unit Setup Test
+//Unit Setup
 null = [] execVM "CapUnitSetup.sqf";
 
 
