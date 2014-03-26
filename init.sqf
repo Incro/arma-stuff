@@ -8,7 +8,7 @@ enableTeamswitch false;
 //Compilation of MarkerManager(MMS)
 //MMS = compile preprocessFile "MarkerManager.sqf";
 
-//Unit Setup
+//Unit Setup Test
 null = [] execVM "CapUnitSetup.sqf";
 
 

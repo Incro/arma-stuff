@@ -214,7 +214,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={25898.879,21.302849,21515.457};
+					position[]={26468.168,21.185083,21396.398};
 					azimut=-134.632;
 					id=16;
 					side="WEST";
@@ -229,7 +229,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=9;
+		items=10;
 		class Item0
 		{
 			position[]={27001.17,20.622715,23196.334};
@@ -308,6 +308,12 @@ class Mission
 		{
 			position[]={25238.789,87.290764,21828.727};
 			name="FOB1";
+			type="Empty";
+		};
+		class Item9
+		{
+			position[]={26706.498,15.709473,21213.205};
+			name="mGatolia";
 			type="Empty";
 		};
 	};
