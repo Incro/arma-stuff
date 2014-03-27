@@ -229,34 +229,8 @@ class Mission
 	};
 	class Markers
 	{
-		items=9;
+		items=8;
 		class Item0
-		{
-			position[]={27695.438,0.19945973,24225.229};
-			name="MolosBay_Area";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorRed";
-			fillName="DiagGrid";
-			a=400;
-			b=450;
-			angle=158.89999;
-		};
-		class Item1
-		{
-			position[]={27446.391,0.0013769493,24267.551};
-			name="MolosBay_Flag";
-			text="CSAT";
-			type="flag_CSAT";
-		};
-		class Item2
-		{
-			position[]={25824.561,21.967335,21510.648};
-			name="sofia_flag";
-			text="CSAT";
-			type="flag_CSAT";
-		};
-		class Item3
 		{
 			position[]={25904.221,21.575377,21522.16};
 			name="SectorSofia";
@@ -267,35 +241,58 @@ class Mission
 			a=20;
 			b=20;
 		};
-		class Item4
+		class Item1
 		{
 			position[]={25222.203,86.792496,21852.453};
 			name="FOB1";
 			type="Empty";
 		};
-		class Item5
+		class Item2
 		{
 			position[]={25243.57,85.44825,21810.154};
 			name="FOB2";
 			type="Empty";
 		};
-		class Item6
+		class Item3
 		{
 			position[]={25264.258,85.67437,21844.852};
 			name="FOB3";
 			type="Empty";
 		};
-		class Item7
+		class Item4
 		{
 			position[]={25210.418,88.364098,21825.574};
 			name="FOB4";
 			type="Empty";
 		};
-		class Item8
+		class Item5
 		{
 			position[]={14754.534,17.91,16671.17};
 			name="HQ";
 			type="Empty";
+		};
+		class Item6
+		{
+			position[]={26936.25,20.325928,24742.883};
+			name="SectorMolosAirfield";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlack";
+			fillName="Grid";
+			a=350;
+			b=250;
+			angle=-32.471401;
+		};
+		class Item7
+		{
+			position[]={26995.129,20.48847,23200.713};
+			name="SectorMolos";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="Grid";
+			a=250;
+			b=250;
 		};
 	};
 };
