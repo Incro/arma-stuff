@@ -21,21 +21,41 @@ AmountSquads = 4;
 AmountWeaponSquads = 2;
 STARTMarker = "HQ";
 
-for "_i" from 1 to AmountSentries do {null = [getMarkerPos STARTMarker, "Sentry"] call SpawnGroup};
-for "_i" from 1 to AmountFireteams do {null = [getMarkerPos STARTMarker,"Fireteam"] call SpawnGroup};
-for "_i" from 1 to AmountSquads do {null = [getMarkerPos STARTMarker,"Squad"] call SpawnGroup};
-for "_i" from 1 to AmountWeaponSquads do {null = [getMarkerPos STARTMarker,"WeaponsSquad"] call SpawnGroup};
 
 
 
-/*[getMarkerPos "HQ", "Squad"] call SpawnGroup;
+[getMarkerPos "HQ", "Squad"] call SpawnGroup;
 [getMarkerPos "FOB1", "OIA_InfSquad_weapons"] call SpawnGroup;
 [getMarkerPos "FOB2", "OI_SniperTeam"] call SpawnGroup;
-[getMarkerPos "FOB3", "Tetsttetet"] call SpawnGroup;*/
+[getMarkerPos "FOB3", "Tetsttetet"] call SpawnGroup;
 
+//First startup put units onto Start pos.
+
+STARTSectors = ["SectorMolosAirfield", "SectorMolos"];
+
+//Two random groups as defense in the first two cities, base
+_aigroupcount = count AIGroup;
+_usedai = [];
+for[{_c =0},{_c = count STARTSectors}, {_c=_c+1}]do {
+    private["_rnd","_rndgroup"];
+    _rnd = random _aigroupcount;
+    _rndgroup = AIGroup select _rnd;
+    [_rndgroup, STARTSectors select _c] call TeleportGroup;
+   
+};
+
+
+TeleportGroup = {
+    private["_group","_sector"];
+    _group = _this select 0;
+    _sector = _this select 1;
+    {_x setPos getMarkerPos _sector}forEach units _group;
+    Player globalChat format["Teleported:%1",_group];
+};
 
 
 SpawnGroup = {
+    private["_group", "_pos", "_tgroup"];
     _group = "no group";
     _pos = _this select 0;
     _tgroup = _this select 1;
@@ -49,13 +69,15 @@ SpawnGroup = {
         };
         };
         Player globalChat format["Spawned:%1", _group];
-        AIGroup = AIGroup + _group;
+        if(AIGroup != "no group") then{ AIGroup = AIGroup + _group;};
         _group
     };
         
 
 SpawnSentry = {
-	_SpawnPos = _this select 0;	
+	
+private ["_SpawnPos","_group"];
+_SpawnPos = _this select 0;	
 	_group = [_SpawnPos, EAST, (configFile >> "CfgGroups" >> "EAST" >> "OPF_F" >> "Infantry" >> "OIA_InfSentry") ] call BIS_fnc_spawnGroup;
 	Player globalChat "Spawned Sentry";
 	_group
@@ -63,31 +85,35 @@ SpawnSentry = {
 	
 	
 SpawnFireteam = {	
-	_SpawnPos = _this select 0;	
+	
+private ["_SpawnPos","_group"];
+_SpawnPos = _this select 0;	
 	_group = [_SpawnPos, EAST, (configFile >> "CfgGroups" >> "EAST" >> "OPF_F" >> "Infantry" >> "OIA_InfTeam") ] call BIS_fnc_spawnGroup;
 	Player globalChat "Spawned Fireteam";
 	_group
 };
 
 SpawnSquad = {	
-	_SpawnPos = _this select 0;	
+	
+private ["_SpawnPos","_group"];
+_SpawnPos = _this select 0;	
 	_group = [_SpawnPos, EAST, (configFile >> "CfgGroups" >> "EAST" >> "OPF_F" >> "Infantry" >> "OIA_InfSquad") ] call BIS_fnc_spawnGroup;
 	Player globalChat "Spawned Squad";
 	_group
 };
 
 SpawnWeaponsSquad = {	
-	_SpawnPos = _this select 0;	
+	
+private ["_SpawnPos","_group"];
+_SpawnPos = _this select 0;	
 	_group = [_SpawnPos, EAST, (configFile >> "CfgGroups" >> "EAST" >> "OPF_F" >> "Infantry" >> "OIA_InfSquad_weapons") ] call BIS_fnc_spawnGroup;
 	Player globalChat "Spawned WeaponsSquad";
 	_group
 };
 
-/*
-for "_i" from 0 to count AIGroups do{
-    {
-    
-    }forEach units group AIGroups select _i;
-};
-*/
+
+
+
+
+
 
