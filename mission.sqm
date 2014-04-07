@@ -222,7 +222,6 @@ class Mission
 					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
-					init="null = [] execVM ""CapUnitSetup.sqf"";";
 				};
 			};
 		};
