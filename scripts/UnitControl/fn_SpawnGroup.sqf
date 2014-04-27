@@ -7,6 +7,8 @@ Parameters:
 	0: Position where you want squad to spawn.
 	1: Kind of Group(Squad,WeaponsSquad,Fireteam,Sentry) or just put in CfgGroups value.
 
+Returns: Group spawned.
+
 */
     private["_group", "_pos", "_tgroup"];
     _group = "no group";

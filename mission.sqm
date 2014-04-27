@@ -6,12 +6,16 @@ class Mission
 		"a3_map_altis",
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f_beta",
-		"air_caf"
+		"air_caf",
+		"A3_Armor_F_AMV",
+		"jsrs2_amv7_marshal"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f_beta",
+		"A3_Armor_F_AMV",
+		"jsrs2_amv7_marshal",
 		"a3_map_altis"
 	};
 	randomSeed=4568355;
@@ -35,7 +39,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=3;
+		items=4;
 		class Item0
 		{
 			side="WEST";
@@ -214,7 +218,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={25970.926,23.931265,21558.418};
+					position[]={23203.654,3.1900001,19009.352};
 					azimut=-134.632;
 					id=16;
 					side="WEST";
@@ -225,10 +229,100 @@ class Mission
 				};
 			};
 		};
+		class Item3
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=8;
+				class Item0
+				{
+					position[]={23151.635,3.1900001,19027.76};
+					id=17;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[group this, getMarkerPos ""WP1""] call UC_fnc_moveto;";
+				};
+				class Item1
+				{
+					position[]={23156.635,3.1900001,19022.76};
+					id=18;
+					side="WEST";
+					vehicle="B_soldier_TL_F";
+					rank="SERGEANT";
+					skill=0.5;
+				};
+				class Item2
+				{
+					position[]={23146.635,3.1900001,19022.76};
+					id=19;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={23161.635,3.1900001,19017.76};
+					id=20;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					skill=0.40000001;
+				};
+				class Item4
+				{
+					position[]={23141.635,3.1900001,19017.76};
+					id=21;
+					side="WEST";
+					vehicle="B_soldier_AAR_F";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={23166.635,3.1900001,19012.76};
+					id=22;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item6
+				{
+					position[]={23136.635,3.1900001,19012.76};
+					id=23;
+					side="WEST";
+					vehicle="B_medic_F";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={23171.635,3.1900001,19007.76};
+					id=24;
+					side="WEST";
+					vehicle="B_soldier_A_F";
+					skill=0.40000001;
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=1;
+		class Item0
+		{
+			position[]={23185.984,3.1900001,19020.84};
+			id=25;
+			side="EMPTY";
+			vehicle="B_APC_Wheeled_01_cannon_F";
+			skill=0.60000002;
+		};
 	};
 	class Markers
 	{
-		items=8;
+		items=9;
 		class Item0
 		{
 			position[]={25904.221,21.575377,21522.16};
@@ -292,6 +386,12 @@ class Mission
 			fillName="Grid";
 			a=250;
 			b=250;
+		};
+		class Item8
+		{
+			position[]={23141.146,3.1900001,18004.445};
+			name="WP1";
+			type="mil_objective";
 		};
 	};
 };
